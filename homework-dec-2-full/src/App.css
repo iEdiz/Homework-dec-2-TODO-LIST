@@ -1,91 +1,116 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap');
 
 * {
-  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background: #8758ff;
+  background: #F1DEC9;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Nanum Brush Script', cursive;
 }
 
-.App {
+.todo-wrapper {
+  background: #8D7B68;
+  margin-top: 80px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.wrapper__header {
+  color: #f8ece4;
+  margin-bottom: 0.5rem;
+  font-size: 60px;
   text-align: center;
 }
 
-h1 {
-  color: #fff;
-  margin-bottom: 0.5rem;
-  font-size: 1.75rem;
-}
-
-.TodoWrapper {
-  background: #1A1A40;
-  margin-top: 5rem;
-  padding: 2rem;
-  border-radius: 5px;
-}
-
-.TodoForm {
+.todo-form {
   width: 100%;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .todo-input {
+  font-family: 'Short Stack', cursive;
+  font-size: 16px;
+  color: #F1DEC9;
   outline: none;
   background: none;
-  border: 1px solid #8758ff;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
+  border: 1px solid #C8B6A6;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin: 10px 0 20px 0;
   width: 300px;
-  color: #fff;
 }
 
 .todo-input::placeholder {
-  color: #ffffff4d;
+  color: #c4b7a9;
+  font-size: 15px;
 }
 
-.todo-btn {
-  background: #8758ff;
-  color: #fff;
+.todo-button {
+  font-family: 'Short Stack', cursive;
+  background: #ae9f92;
+  color: #F3EEEA;
   border: none;
-  padding: 0.55rem;
+  border-radius: 10px;
+  padding: 14px;
+  cursor: pointer;
+  margin: 0 0 0 15px;
   cursor: pointer;
 }
 
-.Todo {
+.todo-button:active {
+  background-color: #F3EEEA;
+  color: #ae9f92;
+}
+
+.todo-element{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #8758ff;
-  color: #fff;
-  padding: 0.75rem 1rem;
+  background: #ad9783;
+  color: #f3e7df;
+  font-size: 30px;
+  padding: 12px 15px;
   border-radius: 5px;
-  margin-bottom: 1rem;
-}
-
-.fa-trash {
-  margin-left: 0.75rem;
+  margin-bottom: 15px;
 }
 
 .incompleted {
-  color: #fff;
   cursor: pointer;
 }
 
 .completed {
-  color: #c5aeff;
+  color: #776B5D;
   text-decoration: line-through;
   cursor: pointer;
 }
 
-.edit-icon,
-.delete-icon {
-  cursor: pointer;
+.edit-button {
+  margin: 0 10px 0 0;
 }
+
+.delete-button, .edit-button {
+  font-family: 'Short Stack', cursive;
+  padding: 10px 11px 10px 11px;
+  border-radius: 10px;
+  border: none;
+  background-color: #8d7f71;
+  color: #F3EEEA;
+  cursor: pointer;
+
+    &:active {
+      background-color: #F3EEEA;
+      color: #8d7f71;
+    }
+    &:hover {
+      opacity: 0.8;
+      transition: 0.2s;
+    }
+}
+

@@ -15,17 +15,21 @@ type TodoItems = {
 
 export const Todo: React.FC<TodoItems> = ({task, toggleComplete, deleteTodo, editTodo}) => {
   return (
-    <div className='Todo'>
+    <div className='todo-element'>
       <p onClick={() => {
         toggleComplete(task.id)
-      }} className={`${task.completed ? 'completed' : ''}`}>{task.task}</p>
+      }} className={`${task.completed ? 'completed' : 'incompleted'}`}>{task.task}</p>
       <div>
-        <button onClick={() => {
-          deleteTodo(task.id);
-        }}>Delete</button>
-        <button onClick={() => {
+        <button className='edit-button' onClick={() => {
           editTodo(task.id)
-        }}>Edit</button>
+        }}>
+          Edit
+        </button>
+        <button className='delete-button' onClick={() => {
+          deleteTodo(task.id);
+        }}>
+          Delete
+        </button>
       </div>
     </div>
   )
